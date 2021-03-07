@@ -9,6 +9,6 @@ Flask-SQLAlchemy
 Flask-WTF
 pandas
 pandas-datareader
-psycopg
+psycopg2
 Werkzeug
 WTForms

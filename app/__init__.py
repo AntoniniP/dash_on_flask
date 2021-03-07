@@ -50,6 +50,10 @@ def register_extensions(server):
     from app.extensions import migrate
 
     db.init_app(server)
+
+    with server.app_context():
+        db.create_all()
+
     login.init_app(server)
     login.login_view = 'main.login'
     migrate.init_app(server, db)
