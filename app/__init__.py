@@ -3,7 +3,7 @@ from flask import Flask
 from flask.helpers import get_root_path
 from flask_login import login_required
 
-from flask import Flask, render_template_string
+from flask import render_template_string
 
 from config import BaseConfig
 
