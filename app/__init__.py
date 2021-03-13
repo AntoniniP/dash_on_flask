@@ -18,7 +18,7 @@ def create_app():
     return server
 
 
-def _get_index_string(template):
+def _get_index_string(template: str) -> str:
     """
     Replace the following 'commented-out' placeholders in my 'dash.html'
     Flask template with the placeholders that Dash requires, for modifying the
