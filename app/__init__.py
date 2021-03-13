@@ -1,9 +1,8 @@
 import dash
 from flask import Flask
+from flask import render_template_string
 from flask.helpers import get_root_path
 from flask_login import login_required
-
-from flask import render_template_string
 
 from config import BaseConfig
 
@@ -21,8 +20,8 @@ def create_app():
 
 def _get_index_string(template):
     """
-    Replace the following 'commented-out' placeholders in my 'dash.html' 
-    Flask template with the placeholders that Dash requires, for modifying the 
+    Replace the following 'commented-out' placeholders in my 'dash.html'
+    Flask template with the placeholders that Dash requires, for modifying the
     'index_string' of the dash app
     """
     template = template.replace(r'<!-- %metas% -->', r'{%metas%}')
@@ -68,7 +67,7 @@ def register_dashapps(app):
 
     # Meta tags for viewport responsiveness
     meta_viewport = {
-        "name": "viewport", 
+        "name": "viewport",
         "content": "width=device-width, initial-scale=1, shrink-to-fit=no"
     }
 
@@ -76,7 +75,7 @@ def register_dashapps(app):
         server=app,
         url_base_pathname='/dash/',
         assets_folder=get_root_path(__name__) + '/assets/',
-        meta_tags=[meta_viewport], 
+        meta_tags=[meta_viewport],
     )
 
     with app.app_context():

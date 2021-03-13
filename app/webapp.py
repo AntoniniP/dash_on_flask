@@ -12,7 +12,11 @@ from werkzeug.urls import url_parse
 from app.extensions import db
 from app.forms import LoginForm
 from app.forms import RegistrationForm
-from app.models import User
+from app.models.user import User
+from app.models.wallet import Wallet
+from app.models.transaction import Transaction
+from app.models.transactionNEW import TransactionDetail, TransactionHeader
+from app.models.category import Category
 
 server_bp = Blueprint('main', __name__)
 

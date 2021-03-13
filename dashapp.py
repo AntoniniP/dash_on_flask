@@ -1,6 +1,10 @@
 from app import create_app
 from app.extensions import db
-from app.models import User
+from app.models.user import User
+from app.models.wallet import Wallet
+from app.models.transaction import Transaction
+from app.models.transactionNEW import TransactionDetail, TransactionHeader
+from app.models.category import Category
 
 server = create_app()
 
@@ -11,7 +15,12 @@ def make_shell_context():
     """
     return dict(
         db=db,
-        User=User
+        User=User,
+        Transaction=Transaction,
+        Category=Category,
+        TransactionDetail=TransactionDetail,
+        TransactionHeader=TransactionHeader,
+        Wallet=Wallet
     )
 
 
