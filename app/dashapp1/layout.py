@@ -13,4 +13,4 @@ layout = html.Div([
         value='COKE'
     ),
     dcc.Graph(id='my-graph')
-], style={'width': '500'})
+])
